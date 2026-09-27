@@ -37,7 +37,7 @@ xtest
 
 #KNN MODEL BUILDING
 from sklearn.neighbors import KNeighborsClassifier
-knn=KNeighborsClassifier()
+knn=KNeighborsClassifier(n_neighbors=7)
 #training model
 knn.fit(xtrain1,ytrain1)
 #testing model
