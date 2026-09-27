@@ -81,7 +81,7 @@ xtest
 
 #1. KNN-MODEL
 from sklearn.neighbors import KNeighborsClassifier
-knn=KNeighborsClassifier()
+knn=KNeighborsClassifier(n_neighbors=7)
 #training Model
 knn.fit(xtrain1,ytrain1)
 #testing model
