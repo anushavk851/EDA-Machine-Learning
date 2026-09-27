@@ -1,0 +1,38 @@
+#DATA UNDERSTANDING
+
+#1. first 3 rows
+print(df.head(3))
+#2. last 3 rows
+print(df.tail(3))
+#3. Number of rows and columns
+print(df.shape)
+#4.Statistical summary
+print(df.describe())
+#5. DataTypes
+print(df.dtypes)
+#6. Columns
+print(df.columns)
+#7 dimension
+print("Dimension:",df.ndim)
+#8 unique values
+print(df.nunique())
+#10. Check Target
+print(df['stroke'].value_counts())
+#11. Categorical columns
+print(df.select_dtypes(include=object).columns)
+#12. Numerical columns
+print(df.select_dtypes(exclude=object).columns)
+#13. Null value check
+print(df.isnull().sum())
+#14. duplicate value checck
+print(df.duplicated().sum())
+
+#DATA CLEANING
+
+#1.null values
+df['bmi']=df['bmi'].fillna(df['bmi'].median())
+print(df.isnull().sum())
+
+#2. Duplicate
+print(df.duplicated().sum())
+df=df.drop_duplicates()
